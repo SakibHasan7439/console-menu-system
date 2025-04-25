@@ -2,8 +2,7 @@
 #include<string>
 using namespace std;
 
-void showMenu(int menuNumber, int num1, int num2, bool isExit){
-
+void showMenu(int menuNumber, int num1, int num2){
     if(menuNumber == 1){
         cout<<num1<< " + "<<num2<< " = "<< num1 + num2<<endl;
 
@@ -33,19 +32,20 @@ int main() {
     
         cout<<"Choose a menu item for Mathmatical calculation or enter 5 to exit: ";
         cin>>menuNumber;
-        if(menuNumber > 5 || menuNumber < 0){
-            cout<<"invalid user input! Please try again.."<<endl;
-
-        }else if(menuNumber == 5){
+        if(menuNumber == 5){
             cout<<"Thank you for using it. GoodBye!";
             break;
+
+        }else if(menuNumber > 5 || menuNumber < 0){
+            cout<<"invalid user input! Please try again.."<<endl;
+            
         }else {
             cout<<"Enter first Number: ";
             cin>>num1;
         
             cout<<"Enter second Number: ";
             cin>>num2;
-            showMenu(menuNumber, num1, num2, isExit);
+            showMenu(menuNumber, num1, num2);
         };
     };
 }
