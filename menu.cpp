@@ -4,7 +4,7 @@
 using namespace std;
 
 void showHistory(vector<string>& history_items){
-    cout<<"Your History is: ";
+    cout<<"Your History is: "<<endl;
     for(string item : history_items){
         cout<<item<<endl;
     };
@@ -35,7 +35,7 @@ void showMenu(int menuNumber, int num1, int num2, vector<string>& history_items)
         }
         cout<<num1<< " / "<<num2<< " = "<< num1 / num2<<endl;
         result = num1 / num2;
-        history_items.push_back(to_string(num1) + " + " + to_string(num2) + " = " + to_string(result));
+        history_items.push_back(to_string(num1) + " / " + to_string(num2) + " = " + to_string(result));
     };
 };
 
